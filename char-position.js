@@ -5,9 +5,9 @@ function letterPositions (string) {
   chars.forEach(function(letter, index) {
 
     if (!numOfChars[letter]) {
-    numOfChars[letter] = index; //creates key for letter
+    numOfChars[letter] = [index]; //creates key for letter
     } else {
-    numOfChars[letter] += ' ' + index;
+    numOfChars[letter] = numOfChars[letter].concat([index]);
     }
   });
   console.log(numOfChars);
